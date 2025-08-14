@@ -1,5 +1,6 @@
 // Базовые импорты
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
 // Стили
 import resStyles from '../../../utils/resStyles.ts';
@@ -165,7 +166,7 @@ export default function Block_1() {
                             {/* Buttons */}
                             <div className={`${styles.action} ${resStyles('main_action', resolutions)}`}>
                                 <PinkButton className={`${resStyles('buttonFontSize', resolutions)}`} sx={{ padding: '10px 25px', fontWeight: '600' }} startIcon={<DiamondRoundedIcon style={{ marginRight: '4px' }} />}>SUBSCRIPTIONS</PinkButton>
-                                <BlueButton className={`${resStyles('buttonFontSize', resolutions)}`} sx={{ padding: '10px 25px', fontWeight: '600' }} startIcon={<CodeRoundedIcon style={{ marginRight: '4px' }} />}>SCRIPTS</BlueButton>
+                                <Link to="/scripts"><BlueButton className={`${resStyles('buttonFontSize', resolutions)}`} sx={{ padding: '10px 25px', fontWeight: '600' }} startIcon={<CodeRoundedIcon style={{ marginRight: '4px' }} />}>SCRIPTS</BlueButton></Link>
                             </div>
                         </>
                         : <></>
